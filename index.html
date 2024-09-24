@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web from Evan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDg3NDB8MHwxfGFsbHwxfHx8fHx8fHwxNjQ2Njk4NjU4&ixlib=rb-1.2.1&q=80&w=1080');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            filter: blur(10px);
+            z-index: -1;
+        }
+
+        .container {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+            text-align: center;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+            color: #FFFFFF; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            opacity: 0;
+            animation: slideInRight 1.2s ease-out forwards;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #ddd;
+            opacity: 0;
+            font-family: 'Open Sans', sans-serif;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        a {
+            color: #00BFFF;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #FFD700;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+            opacity: 0;
+            animation: slideInUp 1.8s ease-out forwards;
+        }
+
+        .button {
+            padding: 14px 30px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 5px 20px rgba(0, 123, 255, 0.5);
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            background-image: linear-gradient(45deg, #0056b3, #33aaff);
+            background-size: 200% 200%;
+            background-position: 0% 50%;
+            display: inline-block;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .button:hover {
+            background-position: 100% 50%;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.6);
+        }
+
+        .button-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .rotate-on-scroll {
+            transform: rotate(0deg);
+            transition: transform 1s ease;
+        }
+
+        .rotate-on-scroll:hover {
+            transform: rotate(360deg);
+        }
+
+        .scale-on-scroll {
+            transform: scale(1);
+            transition: transform 1s ease;
+        }
+
+        .scale-on-scroll:hover {
+            transform: scale(1.2);
+        }
+
+        /* Perbaikan tampilan untuk perangkat mobile */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em; /* Ukuran heading lebih kecil di perangkat mobile */
+                line-height: 1.2; /* Kurangi jarak antar baris */
+            }
+
+            h2 {
+                font-size: 1.2em; /* Heading kedua juga lebih kecil */
+                line-height: 1.2;
+            }
+
+            p {
+                font-size: 0.9em;  /* Ukuran paragraf lebih kecil */
+                line-height: 1.4;  /* Line-height lebih rapat */
+                margin-bottom: 15px;  /* Kurangi jarak antar paragraf */
+            }
+
+            .container {
+                padding: 20px; /* Kurangi padding di container */
+                width: 95%; /* Gunakan lebih banyak ruang di layar kecil */
+                max-width: 600px; /* Maksimalkan lebar pada mobile */
+            }
+
+            .button {
+                padding: 10px 20px;  /* Tombol lebih kecil */
+                font-size: 1em;  /* Ukuran teks di tombol lebih kecil */
+            }
+
+            .button-container {
+                margin-top: 20px;  /* Kurangi margin antara elemen */
+            }
+
+            .background {
+                filter: blur(8px);  /* Kurangi blur agar gambar tetap terlihat */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <h1 class="rotate-on-scroll">Pengenalan Death Battle from TRJ</h1>
+        <h2>Selamat datang di situs web kami</h2>
+        <p>TRJ (The Reincarnation Jurnal) adalah komunitas yang berfokus dalam memperdebatkan karakter fiksi. Dibentuk pada 05-Agustus-2022 oleh Momon dan Reza, komunitas ini juga diisi oleh admin seperti Farlen, Evan, dan Reff yang memiliki pengetahuan luas dalam battleboarding.</p>
+        <p>Untuk penjelasan lebih lanjut mengenai battleboarding, kamu dapat mengunjungi <a href="https://id.m.wikipedia.org/wiki/Balah_tokoh" target="_blank">sumber ini</a>.</p>
+        
+        <div class="button-container scale-on-scroll">
+            <a href="home.html" class="button">Lihat list room</a>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.rotate-on-scroll, .scale-on-scroll');
+            elements.forEach(el => {
+                let position = el.getBoundingClientRect().top;
+                let screenHeight = window.innerHeight;
+
+                if (position < screenHeight) {
+                    el.classList.add('animate');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
