@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Penilaian Sesi 1</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpaperaccess.com/full/39651.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 50px 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .text-block {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            margin-bottom: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Add different delay for each block */
+        .text-block.visible:nth-child(1) {
+            transition-delay: 0.2s;
+        }
+        .text-block.visible:nth-child(2) {
+            transition-delay: 0.4s;
+        }
+        .text-block.visible:nth-child(3) {
+            transition-delay: 0.6s;
+        }
+        .text-block.visible:nth-child(4) {
+            transition-delay: 0.8s;
+        }
+        .text-block.visible:nth-child(5) {
+            transition-delay: 1s;
+        }
+
+        .text-block.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        h1, h2 {
+            margin: 0 0 10px;
+            padding: 0;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Scroll to Top button */
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 100;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Content blocks -->
+    <div class="content">
+        <div class="text-block" id="block1">
+            <h1>Halo</h1>
+            <p>CR: Evan</p>
+        </div>
+
+        <div class="text-block" id="block2">
+            <h2>Ini buat giliran pertama</h2>
+            <p>Ini untuk giliran pertama</p>
+        </div>
+
+        <div class="text-block" id="block3">
+            <h2>Ini buat giliran yang kedua</h2>
+            <p>Sama kayak sebelumnya</p>
+        </div>
+
+        <div class="text-block" id="block4">
+            <h2>Ini buat giliran ketiga/terakhir</h2>
+            <p>Sama kayak sebelumnya juga</p>
+        </div>
+
+        <div class="text-block" id="block5">
+            <h2>Selesai</h2>
+            <p>Terima kasih, sekian</p>
+        </div>
+    </div>
+
+    <!-- Scroll to Top button -->
+    <button id="scrollToTopBtn">⬆️</button>
+
+    <script>
+        // Function to reveal blocks on scroll
+        function revealBlocks() {
+            const blocks = document.querySelectorAll('.text-block');
+            const windowHeight = window.innerHeight;
+
+            blocks.forEach(block => {
+                const blockTop = block.getBoundingClientRect().top;
+                if (blockTop < windowHeight - 100) {
+                    block.classList.add('visible');
+                }
+            });
+        }
+
+        // Scroll to top button
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        // Show button when scroll position is greater than 300px
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Scroll to top on button click
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Initial reveal setup
+        window.addEventListener('scroll', revealBlocks);
+        revealBlocks();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - TRJ Community</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-image: url('https://wallpapersmug.com/download/3840x2160/72a2b5/clouds-fantasy-space-planets.jpg');
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        .container {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .session-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        .session-item {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .session-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        a {
+            text-decoration: none;
+            color: #00BFFF;
+            font-weight: bold;
+            position: relative;
+        }
+
+        a:hover {
+            color: #FFD700;
+        }
+
+        a::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease-in-out;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        a:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 100;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #333;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+    
+    <div class="container">
+        <h1>Daftar Sesi TRJ</h1>
+        <ul class="session-list">
+            <li class="session-item"><a href="Sesi1.html" target="_self" data-tooltip="Masuk ke Room 1">Room 1</a></li>
+            <li class="session-item"><a href="Sesi2.html" target="_self" data-tooltip="Masuk ke Room 2">Room 2</a></li>
+            <li class="session-item"><a href="Sesi3.html" target="_self" data-tooltip="Masuk ke Room 3">Room 3</a></li>
+            <li class="session-item"><a href="Sesi4.html" target="_self" data-tooltip="Masuk ke Room 4">Room 4</a></li>
+            <li class="session-item"><a href="Sesi5.html" target="_self" data-tooltip="Masuk ke Room 5">Room 5</a></li>
+            <li class="session-item"><a href="Sesi6.html" target="_self" data-tooltip="Masuk ke Room 6">Room 6</a></li>
+            <li class="session-item"><a href="Sesi7.html" target="_self" data-tooltip="Masuk ke Room 7">Room 7</a></li>
+            <li class="session-item"><a href="Sesi8.html" target="_self" data-tooltip="Masuk ke Room 8">Room 8</a></li>
+            
+        </ul>
+    </div>
+
+    <button id="scrollToTopBtn">⬆️</button>
+
+    <script>
+        // Scroll to top button
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        // Show button when scroll position is greater than 300px
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Scroll to top on button click
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
