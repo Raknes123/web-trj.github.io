@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Penilaian Sesi 1</title>
+    <title>Judgement: Efektivitas Strategi</title>
     <style>
         html {
             scroll-behavior: smooth;
@@ -34,7 +35,7 @@
 
         .text-block {
             opacity: 0;
-            transform: translateX(-100%);
+            transform: translateY(20px);
             transition: opacity 1s ease-out, transform 1s ease-out;
             margin-bottom: 50px;
             padding: 20px;
@@ -47,32 +48,40 @@
         .text-block.visible:nth-child(1) {
             transition-delay: 0.2s;
         }
+
         .text-block.visible:nth-child(2) {
             transition-delay: 0.4s;
         }
+
         .text-block.visible:nth-child(3) {
             transition-delay: 0.6s;
         }
+
         .text-block.visible:nth-child(4) {
             transition-delay: 0.8s;
         }
+
         .text-block.visible:nth-child(5) {
             transition-delay: 1s;
         }
 
         .text-block.visible {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateY(0);
         }
 
-        h1, h2 {
-            margin: 0 0 10px;
+        h1, h2, h3 {
+            margin: 0;
             padding: 0;
         }
 
         p {
-            margin: 0;
+            margin: 10px 0;
             line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
         }
 
         /* Scroll to Top button */
@@ -96,90 +105,81 @@
         }
     </style>
 </head>
+
 <body>
+    <div class="content">
+        <h1>Judgement: Efektivitas Strategi Offensive & Defensive</h1>
 
-    <!-- Content blocks -->
-    <!-- Div 1: Pembukaan -->
-<div class="text-block" id="block1"> 
-    <h1>Judgement</h1> 
-    <p>Karena judgement ini hanya memerhatikan aspek keefektivitasan dari <em>Strategy: Offensive & Defensive</em> dengan kategori <em>Counter Strategy</em> yang akan masuk ke dalam upaya <em>Defensive</em>, akan membuat aspek selain dari yang telah disebutkan menjadi tidak dihitung meskipun tetap dipertimbangkan.</p>
-    <p>Lebih lanjutnya, sistem poin tidak akan digunakan karena kemenangan peserta akan didapatkan melalui evaluasi, analisis, dan perbandingan — siapa saja yang kalah dan siapa yang menang — <em>Strategy: Offensive & Defensive</em>.</p>
-</div>
+        <div class="text-block" id="block1">
+            <h2>Pembukaan</h2>
+            <p>Judgement ini menilai efektivitas strategi <em>Offensive & Defensive</em> dalam konteks <em>Counter Strategy</em>, dengan fokus pada upaya <em>Defensive</em>. Tidak ada sistem poin; kemenangan ditentukan oleh evaluasi dan analisis strategi.</p>
+        </div>
 
-<!-- Div 2: Equals -->
-<div class="text-block" id="block2"> 
-    <h2>Equals</h2> 
-    <p>- AP = 6-C</p> 
-    <p>- Dura = 6-C</p> 
-    <p>- Speed = FTL</p>
-</div>
+        <div class="text-block" id="block2">
+            <h2>Equals</h2>
+            <ul>
+                <li>AP = 6-C</li>
+                <li>Dura = 6-C</li>
+                <li>Speed = FTL</li>
+            </ul>
+        </div>
 
-<!-- Div 3: Awalan Sebelum Keefektivitasan -->
-<div class="text-block" id="block3"> 
-    <h2>Awalan Sebelum Masuk ke Bagian Keefektivitasan Strategy: Offensive & Defensive</h2> 
-    <p>Opsi dan tipe dari strategi peserta akan diasumsikan berjalan dan beralih sesuai dengan urutannya serta kegentingan situasi.</p>
-</div>
+        <div class="text-block" id="block3">
+            <h2>Strategi Peserta</h2>
+            <h3>Yoga sebagai Mahoraga</h3>
+            <p><strong>Offensive:</strong></p>
+            <ul>
+                <li>H2H</li>
+                <li>World Slash</li>
+            </ul>
+            <p><strong>Defensive:</strong></p>
+            <ul>
+                <li>Reactive Evolution</li>
+                <li>High-Mid Regeneration</li>
+                <li>Extrasensory Perception</li>
+                <li>Curses Spirit Physiology</li>
+            </ul>
+        </div>
 
-<!-- Div 4: Strategies from Each Participants (Yoga) -->
-<div class="text-block" id="block4"> 
-    <h2>Strategies from Each Participants</h2> 
-    <h3>○ Yoga as Mahoraga</h3> 
-    <p><strong>Offensive</strong></p>
-    <p>1. H2H</p>
-    <p>2. World Slash</p>
-    <p><strong>Defensive</strong></p>
-    <p>1. Reactive Evolution</p>
-    <p>2. High-Mid Regeneration</p>
-    <p>3. Extrasensory Perception</p>
-    <p>4. Curses Spirit Physiology</p>
-</div>
+        <div class="text-block" id="block4">
+            <h3>Michie sebagai Ikki Kurogane</h3>
+            <p><strong>Offensive:</strong></p>
+            <ul>
+                <li>Desperados Physiology (beberapa kemampuan di-ban)</li>
+                <li>Oikage Technique (di-ban)</li>
+            </ul>
+            <p><strong>Defensive:</strong></p>
+            <ul>
+                <li>Desperados Physiology</li>
+                <li>Reactive Evolution</li>
+                <li>Precognition</li>
+                <li>Enhanced Senses</li>
+            </ul>
+        </div>
 
-<!-- Div 5: Strategies from Each Participants (Michie) -->
-<div class="text-block" id="block5"> 
-    <h3>○ Michie as Ikki Kurogane</h3> 
-    <p><strong>Offensive</strong></p>
-    <p>1. Desperados Physiology</p>
-    <p>2. Oikage Technique</p>
-    <p><strong>Defensive</strong></p>
-    <p>1. Desperados Physiology</p>
-    <p>2. Reactive Evolution, Precognition, Enhanced Senses</p>
-    <p><em>Note: "Ignorances abilities yang melanggar aturan dalam regulasi."</em></p>
-</div>
+        <div class="text-block" id="block5">
+            <h2>Masalah Kemampuan</h2>
+            <ul>
+                <li><strong>Desperados Physiology:</strong> Beberapa kemampuan di-ban karena menjamin kematian.</li>
+                <li><strong>Oikage Technique:</strong> Di-ban.</li>
+                <li><strong>Curses Spirit Physiology:</strong> Tidak ada bukti efektivitasnya.</li>
+                <li><strong>Reactive Evolution Mahoraga:</strong> Argumen lemah untuk mengatasi <em>Acausality Type 4</em> Ikki.</li>
+            </ul>
+        </div>
 
-<!-- Div 6: Last - Masalah Desperados Physiology -->
-<div class="text-block" id="block6"> 
-    <h2>Last</h2> 
-    <h3>○ Masalah Desperados Physiology</h3> 
-    <p>Beberapa Ability dari Desperados Physiology milik Ikki akan di-ban, seperti <em>Passive Causality, Fate, Gravity & Death Manipulation, Passive Mind Manipulation, Alternate Future Display, Death Loop & Fear Manipulation Type Neurological Based on Causality, Paralysis Inducement Based on Fate & Causality</em>.</p> 
-    <p>Untuk 4 ability pertama, di-ban karena memberikan perubahan kausalitas dengan tarikan gravitasi Takdir Desperados, yang mampu membawa seseorang kepada akhir atau kematian itu sendiri (guaranteed death).</p>
-</div>
+        <div class="text-block" id="block6">
+            <h2>Pertarungan</h2>
+            <p>Mahoraga menyerang Ikki secara agresif, sementara Ikki bertahan menggunakan <em>Reactive Evolution</em> dan kemampuan defensif lainnya. Namun, tidak ada serangan ofensif dari Ikki, sedangkan Mahoraga aktif menyerang, yang membuat hasilnya tidak seimbang.</p>
+        </div>
 
-<!-- Div 7: Masalah Oikage Technique dan Curses Spirit Physiology -->
-<div class="text-block" id="block7"> 
-    <h3>○ Masalah Oikage Technique</h3> 
-    <p>Same treatment.</p> 
-    <h3>○ Masalah Curses Spirit Physiology</h3> 
-    <p>Sebenarnya, relasi penggunaanya fisiologi ini terhadap masalah yang dihadapi kurang jelas. Tetapi akan saya asumsikan seperti ini: Hanya karena mampu memberikan efek yang serupa dengan Desperados yakni memperlihatkan kematian, bukan berarti akan membuatnya tidak terpengaruh (Gak ada masalahnya juga sih karena ability lawan kena ban).</p>
-</div>
-
-<!-- Div 8: Masalah Reactive Evolution Mahoraga -->
-<div class="text-block" id="block8"> 
-    <h3>○ Masalah Kapabilitas Reactive Evolution Mahoraga</h3> 
-    <p>Pihak Mahoraga memiliki poor argument untuk mengatasi Acausality Type 4 dari Ikki dengan upaya untuk mengaitkan Cursed Energy terhadap Kausalitas dan Takdir (walau sebenarnya bisa saja, tetapi key aspect-nya gak ada sama sekali).</p>
-</div>
-
-<!-- Div 9: Pertarungan -->
-<div class="text-block" id="block9"> 
-    <h3>○ Pertarungan</h3> 
-    <p>Mahoraga akan secara pasti nenerjang Ikki dan menyerangnya secara membabi buta dan juga melancarkan World Slash di beberapa kesempatan. Ikki mampu menghindarinya dengan Reactive Evolution yang ditunjukkan mampu beradaptasi pada serangan yang mustahil dihindari, Precognition, dan Enhanced Senses.</p>
-</div>
-
-<!-- Div 10: Results -->
-<div class="text-block" id="block10"> 
-    <h2>Results</h2> 
-    <p>- NT Michie</p> 
-    <p>- GG Yoga</p>
-</div>
+        <div class="text-block" id="block7">
+            <h2>Hasil</h2>
+            <ul>
+                <li><strong>GG:</strong> Mahoraga (Yoga)</li>
+                <li><strong>NT:</strong> Ikki Kurogane (Michie)</li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Scroll to Top button -->
     <button id="scrollToTopBtn">⬆️</button>
@@ -219,6 +219,7 @@
         window.addEventListener('scroll', revealBlocks);
         revealBlocks();
     </script>
-
 </body>
+
 </html>
+
