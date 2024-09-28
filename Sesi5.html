@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Judgement: Efektivitas Strategi</title>
+    <title>Penilaian Sesi 1</title>
     <style>
         html {
             scroll-behavior: smooth;
@@ -14,7 +14,7 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-image: url('https://1.bp.blogspot.com/-CTT0pfR2ABM/YBAdh5rHF0I/AAAAAAAAeVQ/7qosdjPH8AQaH16B36peycLuSTzWnP3vQCLcBGAsYHQ/s16000/heroscreen.cc-cool-wallpaper-for-desktop-01262021-169.jpg');
             background-size: cover;
             background-attachment: fixed;
@@ -31,158 +31,114 @@
         .content {
             max-width: 800px;
             margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
         }
 
         .text-block {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-            margin-bottom: 50px;
+            transform: translateX(-100%);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            margin-bottom: 40px;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
-        /* Add different delay for each block */
-        .text-block.visible:nth-child(1) {
-            transition-delay: 0.2s;
-        }
-
-        .text-block.visible:nth-child(2) {
-            transition-delay: 0.4s;
-        }
-
-        .text-block.visible:nth-child(3) {
-            transition-delay: 0.6s;
-        }
-
-        .text-block.visible:nth-child(4) {
-            transition-delay: 0.8s;
-        }
-
-        .text-block.visible:nth-child(5) {
-            transition-delay: 1s;
-        }
-
         .text-block.visible {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
         }
 
-        h1, h2, h3 {
-            margin: 0;
+        h1,
+        h2 {
+            margin: 0 0 15px;
             padding: 0;
+            font-weight: bold;
         }
 
         p {
-            margin: 10px 0;
+            margin: 0;
             line-height: 1.6;
+            margin-bottom: 20px; /* Spasi di bawah setiap paragraf */
         }
 
-        ul {
-            margin-left: 20px;
-        }
-
-        /* Scroll to Top button */
         #scrollToTopBtn {
             position: fixed;
             bottom: 20px;
             right: 20px;
             display: none;
-            background-color: #555;
-            color: white;
+            background-color: transparent; /* Latar belakang transparan */
             border: none;
-            padding: 10px;
             border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
             cursor: pointer;
-            font-size: 20px;
             z-index: 100;
+            transition: transform 0.3s, opacity 0.3s;
+            opacity: 0.7; /* Sedikit transparan untuk memberi efek */
         }
 
         #scrollToTopBtn:hover {
-            background-color: #333;
+            transform: scale(1.1);
+            opacity: 1; /* Menghilangkan transparansi saat dihover */
         }
     </style>
 </head>
 
 <body>
     <div class="content">
-        <h1>Judgement: Efektivitas Strategi Offensive & Defensive</h1>
-
         <div class="text-block" id="block1">
-            <h2>Pembukaan</h2>
-            <p>Judgement ini menilai efektivitas strategi <em>Offensive & Defensive</em> dalam konteks <em>Counter Strategy</em>, dengan fokus pada upaya <em>Defensive</em>. Tidak ada sistem poin; kemenangan ditentukan oleh evaluasi dan analisis strategi.</p>
+            <h1>Judgement</h1>
+            <p>Pembukaan: Penilaian ini fokus pada keefektivitasan <em>Strategy: Offensive & Defensive</em> dalam <em>Counter Strategy</em> untuk aspek Defensive.</p>
         </div>
 
         <div class="text-block" id="block2">
             <h2>Equals</h2>
-            <ul>
-                <li>AP = 6-C</li>
-                <li>Dura = 6-C</li>
-                <li>Speed = FTL</li>
-            </ul>
+            <p>AP = 6-C, Dura = 6-C, Speed = FTL</p>
         </div>
 
         <div class="text-block" id="block3">
             <h2>Strategi Peserta</h2>
             <h3>Yoga sebagai Mahoraga</h3>
-            <p><strong>Offensive:</strong></p>
-            <ul>
-                <li>H2H</li>
-                <li>World Slash</li>
-            </ul>
-            <p><strong>Defensive:</strong></p>
-            <ul>
-                <li>Reactive Evolution</li>
-                <li>High-Mid Regeneration</li>
-                <li>Extrasensory Perception</li>
-                <li>Curses Spirit Physiology</li>
-            </ul>
+            <p><strong>Offensive:</strong> H2H, World Slash<br>
+                <strong>Defensive:</strong> Reactive Evolution, High-Mid Regeneration, Extrasensory Perception, Curses Spirit Physiology</p>
+            <h3>Michie sebagai Ikki Kurogane</h3>
+            <p><strong>Offensive:</strong> Desperados Physiology, Oikage Technique<br>
+                <strong>Defensive:</strong> Desperados Physiology, Reactive Evolution, Precognition, Enhanced Senses</p>
         </div>
 
         <div class="text-block" id="block4">
-            <h3>Michie sebagai Ikki Kurogane</h3>
-            <p><strong>Offensive:</strong></p>
-            <ul>
-                <li>Desperados Physiology (beberapa kemampuan di-ban)</li>
-                <li>Oikage Technique (di-ban)</li>
-            </ul>
-            <p><strong>Defensive:</strong></p>
-            <ul>
-                <li>Desperados Physiology</li>
-                <li>Reactive Evolution</li>
-                <li>Precognition</li>
-                <li>Enhanced Senses</li>
-            </ul>
+            <h2>Masalah Kemampuan</h2>
+            <p><strong>Desperados Physiology:</strong> Beberapa kemampuan di-ban karena perubahan kausalitas yang dapat membawa dampak fatal. Kemampuan seperti <em>Passive Causality, Fate Manipulation</em>, dan <em>Death Loop</em> berpotensi memberikan keunggulan yang tidak adil dengan menjamin kematian lawan, sehingga penggunaannya dilarang dalam konteks ini. Ini mengarah pada kerugian yang tidak dapat dihindari bagi lawan, membuatnya mustahil untuk berkompetisi secara adil.</p>
+
+            <p><strong>Oikage Technique:</strong> Dikenakan perlakuan yang sama untuk menjaga keseimbangan. Teknik ini dapat menciptakan efek di luar batas normal yang berpotensi merusak struktur pertarungan, sehingga penggunaannya juga dibatasi. Hal ini untuk memastikan bahwa pertarungan berlangsung dalam lingkup yang wajar dan tidak merugikan pihak lain secara tidak langsung.</p>
+
+            <p><strong>Curses Spirit Physiology:</strong> Meskipun efeknya mirip dengan Desperados, yang menunjukkan kematian kepada lawan, tidak ada bukti tambahan untuk mendukung klaim bahwa kemampuan ini dapat mempengaruhi takdir lawan dengan cara yang sama. Penggunaan kemampuan ini dianggap kurang efektif karena tidak memiliki dampak yang cukup signifikan dalam konteks pertarungan melawan Mahoraga.</p>
+
+            <p><strong>Reactive Evolution:</strong> Meskipun memiliki kemampuan untuk beradaptasi dengan serangan lawan, ada kekhawatiran mengenai efektivitasnya dalam menghadapi Acausality Type 4 yang dimiliki oleh Ikki. Adalah penting untuk memahami bahwa meskipun Mahoraga dapat beradaptasi, adaptasi tersebut masih terbatas oleh sifat kausalitas yang ada. Tanpa pemahaman yang lebih dalam tentang bagaimana kausalitas bekerja dalam konteks ini, argumen yang diajukan oleh Mahoraga mungkin tidak cukup kuat untuk mengatasi kemampuan Ikki yang lebih dominan.</p>
         </div>
 
         <div class="text-block" id="block5">
-            <h2>Masalah Kemampuan</h2>
-            <ul>
-                <li><strong>Desperados Physiology:</strong> Beberapa kemampuan di-ban karena menjamin kematian.</li>
-                <li><strong>Oikage Technique:</strong> Di-ban.</li>
-                <li><strong>Curses Spirit Physiology:</strong> Tidak ada bukti efektivitasnya.</li>
-                <li><strong>Reactive Evolution Mahoraga:</strong> Argumen lemah untuk mengatasi <em>Acausality Type 4</em> Ikki.</li>
-            </ul>
-        </div>
-
-        <div class="text-block" id="block6">
             <h2>Pertarungan</h2>
-            <p>Mahoraga menyerang Ikki secara agresif, sementara Ikki bertahan menggunakan <em>Reactive Evolution</em> dan kemampuan defensif lainnya. Namun, tidak ada serangan ofensif dari Ikki, sedangkan Mahoraga aktif menyerang, yang membuat hasilnya tidak seimbang.</p>
-        </div>
+            <p>Mahoraga memulai pertarungan dengan agresif, menggunakan teknik <em>World Slash</em> untuk menyerang Ikki dari jarak jauh, menciptakan gelombang energi yang mampu melahap ruang. Ikki, meskipun tertekan, menggunakan <em>Reactive Evolution</em> dan <em>Enhanced Senses</em> untuk memprediksi dan menghindari serangan tersebut dengan presisi. Setiap kali Mahoraga menyerang, Ikki beradaptasi dan menemukan cara baru untuk menghindari serangan.</p>
 
-        <div class="text-block" id="block7">
-            <h2>Hasil</h2>
-            <ul>
-                <li><strong>GG:</strong> Mahoraga (Yoga)</li>
-                <li><strong>NT:</strong> Ikki Kurogane (Michie)</li>
-            </ul>
+            <p>Namun, meskipun Ikki mampu menghindari serangan langsung, penggunaan kemampuan ofensifnya terbatas akibat larangan pada <em>Desperados Physiology</em> dan <em>Oikage Technique</em>. Ini membuatnya terjebak dalam posisi defensif yang melelahkan. Mahoraga, yang mampu menyesuaikan strategi serangannya berdasarkan pola serangan Ikki, mulai mengembangkan jangkauan tekniknya. Ini memberikan keuntungan, memungkinkan Mahoraga untuk melakukan serangan area (AoE) yang membuatnya semakin sulit bagi Ikki untuk menghindar.</p>
+
+            <p>Ikki mencoba menggunakan <em>Extrasensory Perception</em> untuk mendeteksi gerakan Mahoraga yang sulit diprediksi, namun semakin lama, Mahoraga beradaptasi terhadap kemampuan defensif Ikki. Mahoraga dapat memperluas dan mempercepat serangan untuk menciptakan berbagai sudut serangan yang lebih kompleks, meningkatkan intensitas serangan, dan memaksa Ikki untuk terus-menerus bergerak untuk bertahan hidup.</p>
+
+            <p>Walaupun Ikki menunjukkan keuletan dan kekuatan dalam pertahanan, dia akhirnya berada dalam posisi yang tidak menguntungkan. Keterbatasan dalam serangan ofensifnya, ditambah dengan serangan tak terduga dari Mahoraga, menjadikan pertarungan ini lebih berpihak pada Mahoraga. Tanpa strategi ofensif yang efektif, Ikki tidak dapat memberikan tekanan yang cukup kepada Mahoraga, yang semakin mendominasi.</p>
+
+            <h3>Hasil</h3>
+            <p>NT Michie<br>GG Yoga</p>
         </div>
     </div>
 
-    <!-- Scroll to Top button -->
-    <button id="scrollToTopBtn">⬆️</button>
+        <button id="scrollToTopBtn">⬆️</button>
 
     <script>
         // Function to reveal blocks on scroll
